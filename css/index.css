@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Permanent+Marker');
+
+:root {
+    --primary-color: black;
+    --secondary-color: orange;
+    font-family: 'Permanent Marker', cursive;
+}
+
+body {
+    max-width: 800px;
+    margin: auto;
+}
+
+* {
+    margin: 0;
+    Padding: 0;
+}
+
+header .logo {
+    text-align: center;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 3rem;
+}
+
+header nav ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+@media(min-width:500px) {
+    header nav {
+        display: flex;
+    }
+    header nav ul {
+        flex: 1;
+    }
+}
+
+header .banner {
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/ms.jpg);
+    min-height: 418px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .banner h1 {
+    color: var(--secondary-color);
+    font-size: 4rem;
+    font-family: 'Allerta Stencil', sans-serif;
+    margin-bottom: 20px;
+}
+
+main .product-list .product-card img {
+    display: block;
+    width: 100%;
+}
+
+main .product-list .product-card .button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+main .product-list .product-card h3,
+main .product-list .product-card p {
+    padding: 0 5px;
+}
+
+@media(min-width: 500px) {
+    main .product-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:2px;
+
+    }
+}
+@media(min-width: 660px) {
+    main .product-list {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap:2px;
+
+    }
+}
+@media(min-width: 800px) {
+    main .product-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap:2px;
+
+    }
+}
